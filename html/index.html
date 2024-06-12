@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Todo</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="root">
+      <header class="header-container">
+        <h1>PERSONAL TASK MANAGER</h1>
+        <div>
+          <span class="black-white">
+            <input id="darkmode-toggle" type="checkbox" />
+            <label class="label-darkmode" for="darkmode-toggle">
+              <i class="fa-solid fa-moon"></i>
+              <i class="fa-regular fa-sun"></i>
+            </label>
+          </span>
+        </div>
+        <div class="modal-update hidden">
+          <div class="p-relative">
+            <button type="button">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="add-task-input">
+            <input id="update_input" type="text" placeholder="Task Update" />
+          </div>
+          <div class="modal-add-task">
+            <button id="update_btn" class="btn" type="button">Update</button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="section1">
+          <div class="section1-child1">
+            <div>
+              <div class="paragrph">
+                <h3>Categories</h3>
+              </div>
+              <div class="filter-bottoms">
+                <button id="complated" class="btn" type="button">
+                  Complated
+                </button>
+                <button id="urgent" class="btn" type="button">Urgent</button>
+                <button id="important" class="btn" type="button">
+                  Important
+                </button>
+                <button id="later" class="btn" type="button">Later</button>
+                <button id="tostudy" class="btn" type="button">To study</button>
+                <button id="show-all" class="btn" type="button">
+                  Show All
+                </button>
+              </div>
+            </div>
+            <!-- <div class="add">
+              <button class="addCategory">Add category</button>
+            </div> -->
+          </div>
+
+          <div class="section1-child2">
+            <div class="section1-child2-header">
+              <div class="number-task">
+                <span id="number-task">0</span> task
+              </div>
+              <div class="add-new">
+                <button id="addNewTask" class="btn addCategory" type="button">
+                  Add new task
+                </button>
+              </div>
+              <div class="clear-com">
+                <button class="tasks-clear">Clear completed</button>
+              </div>
+            </div>
+            <div class="section1-main">
+              <ul class="tasks"></ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="modal" class="modal hidden">
+      <div class="modal-header">
+        <h3>Add new task</h3>
+      </div>
+      <div class="modal-main">
+        <div class="add-task-input">
+          <input id="addTaskInput" type="text" placeholder="Task" />
+        </div>
+        <div>
+          <div class="paragrph">
+            <h3>Categories</h3>
+          </div>
+          <div class="modal-buttons">
+            <button id="complated2" class="btn btn2" type="button">
+              Complated
+            </button>
+            <button id="urgent2" class="btn btn2" type="button">Urgent</button>
+            <button id="important2" class="btn btn2" type="button">
+              Important
+            </button>
+            <button id="later2" class="btn btn2" type="button">Later</button>
+            <button id="tostudy2" class="btn btn2" type="button">
+              To study
+            </button>
+          </div>
+        </div>
+        <div class="modal-add-task">
+          <button id="addTask" class="btn" type="button">Add Task</button>
+        </div>
+      </div>
+    </div>
+    <div id="overlay" class="overlay hidden"></div>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

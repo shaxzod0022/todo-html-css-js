@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.root {
+    background: #1C273C;
+    height: 735px;
+}
+
+header {
+    text-align: center;
+    position: relative;
+    padding: 50px;
+}
+
+header h1 {
+    color: #E9C597;
+
+}
+
+.fa-sun {
+    color: #1C273C;
+}
+
+.section1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    height: 400px;
+}
+
+.section1-child1 {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #354259;
+    border-radius: 10px;
+    padding: 1rem;
+    border-bottom: 4px solid #44A0A0;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: start;
+    margin-top: 5px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-bottom: 2px solid white;
+}
+
+.task div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.section1-main {
+    margin-top: 7px;
+    border-radius: 10px;
+    border-bottom: 4px solid #44A0A0;
+    background-color: #354259;
+    height: 87%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.paragrph h3,
+.task p {
+    color: white;
+}
+
+.task p {
+    text-align: left;
+}
+
+.paragrph {
+    position: relative;
+}
+
+.paragrph h3::before {
+    position: absolute;
+    top: 50%;
+    content: "";
+    display: flex;
+    width: 15%;
+    height: 2px;
+    background-color: white;
+}
+
+.paragrph h3::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    content: "";
+    width: 15%;
+    height: 2px;
+    background-color: white;
+}
+
+.filter-bottoms {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 2rem;
+}
+
+.section1-child2 {
+    width: 600px;
+    position: relative;
+    border-radius: 10px;
+    /* border-bottom: 4px solid #44A0A0; */
+    /* background-color: #354259; */
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 3px 30px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#complated,
+.complated,
+#complated2 {
+    background: #4CAF50;
+}
+
+#complated:hover,
+#complated2:hover {
+    background-color: #409543;
+}
+
+#urgent,
+#urgent2,
+.urgent,
+.closeBtn {
+    background: #FF5252;
+}
+
+#urgent:hover,
+#urgent2:hover {
+    background: #cd4242;
+}
+
+#important,
+.important,
+#important2 {
+    background: #FFC107;
+}
+
+#important:hover,
+#important2:hover {
+    background: #d6a206;
+}
+
+#later,
+.later,
+#later2 {
+    background: #9C27B0;
+}
+
+#later:hover,
+#later2:hover {
+    background: #791f88;
+}
+
+#tostudy,
+.tostudy,
+#tostudy2 {
+    background: #26A7B8;
+}
+
+#tostudy:hover,
+#tostudy2:hover {
+    background: #1d808e;
+}
+
+.task-type {
+    width: 100px;
+    padding: 3px 0;
+    cursor: no-drop;
+}
+
+.addCategory {
+    border-radius: 8px;
+    padding: 3px 20px;
+    background: #44A0A0;
+    border: none;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.addCategory:hover {
+    background: #337777;
+}
+
+.section1-child2-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #354259;
+    border-radius: 10px;
+    padding: 8px 12px;
+    border-bottom: 4px solid #44A0A0;
+}
+
+.clear-com button {
+    background: transparent;
+    border: none;
+    color: #26A7B8;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.task-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 12px;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.d-flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.section1-child1-bottom span {
+    color: #44A0A0;
+}
+/* sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss */
+.check-btn,
+.task-clear,
+.task-updet {
+    border: none;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.task-updet {
+    background-color: #409543;
+    color: white;
+}
+
+.task-updet:hover {
+    background-color: green;
+    color: white;
+}
+
+.task-clear {
+    background-color: #FF5252;
+    color: white;
+}
+
+.task-clear:hover {
+    background-color: red;
+}
+
+.click-check {
+    border: none;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    padding: 4px 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.number-task {
+    color: #44A0A0;
+    font-weight: 600;
+}
+
+.closeBtn {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+}
+
+.modal,
+.modal-update {
+    border-radius: 10px;
+    background: #354259;
+    width: 400px;
+    position: fixed;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    z-index: 1;
+    border: 2px solid white;
+}
+
+.modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-update {
+    top: 13%;
+    right: -10px;
+    transform: translate(-50%, -50%);
+}
+
+.modal-update div {
+    margin: 1rem;
+}
+
+.p-relative {
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
+
+.p-relative button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-buttons button {
+    width: 40%;
+}
+
+.modal-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.modal-buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 14px;
+    align-items: center;
+}
+
+.modal-add-task button {
+    color: #26A7B8;
+    border: 3px solid #26A7B8;
+}
+
+#addTask {
+    display: none;
+}
+
+.modal-add-task button:hover {
+    color: white;
+    background-color: #26A7B8;
+    transition: 0.3s;
+}
+
+.add-task-input input {
+    padding: 5px;
+    width: 80%;
+    border-radius: 8px;
+    border: none;
+}
+
+.add-task-input input:focus {
+    outline: none;
+}
+
+.overlay {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.hidden {
+    display: none;
+}
+
+.tasks-clear-delet {
+    display: none;
+    color: red !important;
+}
+
+#show-all {
+    background-color: darkmagenta;
+}
+
+#show-all:hover {
+    background-color: rgb(98, 4, 98);
+}
+
+#show-all:active {
+    background-color: rgb(209, 28, 209);
+}
+
+.black-white {
+    position: relative;
+    top: -48px;
+    /* right: -23px; */
+}
+
+label {
+    width: 50px;
+    height: 22px;
+    position: absolute;
+    left: 600px;
+    display: block;
+    background-color: #26A7B8;
+    border-radius: 30px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+label::after {
+    content: "";
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    background: linear-gradient(180deg, #1C273C, #1C273C);
+    border-radius: 100px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.black-white input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.black-white input:checked+label {
+    background: #1C273C;
+}
+
+.black-white input:checked+label::after {
+    left: 48px;
+    transform: translate(-100%);
+    background: linear-gradient(180deg, #26A7B8, #26A7B8);
+    transition: 0.3s;
+}
+
+label:active::after {
+    width: 23px;
+}
+
+label i {
+    position: absolute;
+    width: 1px;
+    top: 3px;
+    z-index: 100;
+}
+
+label .fa-sun {
+    left: 31px;
+    fill: #fff;
+    color: #fcf81c;
+}
+
+label .fa-moon {
+    left: 5px;
+    fill: #7e7e7e;
+    color: white;
+}
